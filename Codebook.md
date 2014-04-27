@@ -1,14 +1,11 @@
-Source:
+Codebook
+========
 
-Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto. 
-Smartlab - Non Linear Complex Systems Laboratory 
-DITEN - Universit√  degli Studi di Genova, Genoa I-16145, Italy. 
-activityrecognition '@' smartlab.ws 
-www.smartlab.ws 
+Data Source: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The Actual Data itself: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 
-
-Data Set Information:
+## Data Set Information
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
@@ -16,12 +13,19 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 Check the README.txt file for further details about this dataset.
 
+## Variables
 
-Attribute Information:
+Output Variables are:
 
-For each record in the dataset it is provided: 
-- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. 
-- Triaxial Angular velocity from the gyroscope. 
-- A 561-feature vector with time and frequency domain variables. 
-- Its activity label. 
-- An identifier of the subject who carried out the experiment.
++ data
++ tidy
+
+all other variables are intermidiate and could be (but I have not) deleted befor returning.
+
+### data
+
+is the full data set limited to only the columns (variables) naming mean and std. The first three columns are the subject, Result and the ResultName (the Label to the Codes).
+
+### tidy
+
+is the aggregated dataset based on data returning the mean for all columns aggegated by Subject, Result and ResultName
